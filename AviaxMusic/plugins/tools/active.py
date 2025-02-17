@@ -2,16 +2,16 @@ from pyrogram import filters, Client
 from pyrogram.types import Message
 from unidecode import unidecode
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
-from RessoMusic import app
-from RessoMusic.misc import SUDOERS
-from RessoMusic.utils.database import (
+from AviaxMusic import app
+from AviaxMusic.misc import SUDOERS
+from AviaxMusic.utils.database import (
     get_active_chats,
     get_active_video_chats,
     remove_active_chat,
     remove_active_video_chat,
 )
-from RessoMusic.utils.database import add_served_chat
-from RessoMusic.utils.database import get_assistant
+from AviaxMusic.utils.database import add_served_chat
+from AviaxMusic.utils.database import get_assistant
 
 async def generate_join_link(chat_id: int):
     invite_link = await app.export_chat_invite_link(chat_id)
